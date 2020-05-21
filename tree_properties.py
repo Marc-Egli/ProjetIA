@@ -41,7 +41,7 @@ class TreeProperties:
         return str(
             {
                 "Nombre moyen d'enfants : ": self.avg_child,
-                "Taille de la plus grande branche : ": self.longest_branch,
-                "Taille de la plus courte branche : ": self.shortest_branch
+                "\nTaille de la plus grande branche : ": self.longest_branch,
+                "\nTaille de la plus courte branche : ": self.shortest_branch
             }
         )

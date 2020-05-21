@@ -117,7 +117,6 @@ class ID3_advance:
 
 
     def meilleure_separation(self,donnees, attributs):
-        candidats = ()
         candidats = []
         meilleure_entropy=1
         for a in attributs:
@@ -130,7 +129,7 @@ class ID3_advance:
                     candidats.append((a,v))
         if len(candidats) is not  1 :
             candidats.sort(key=lambda x: x[1])
-            candidat = random.choice(candidats)
+            candidat = candidats[int(len(candidats) / 2)]
         else :
             candidat = candidats[0]
 

@@ -4,7 +4,7 @@ from moteur_id3.id3 import ID3
 from tree_properties import TreeProperties
 from test_env import TestEnv
 from genere_regles import GenereRegles
-from correcteur import Correcteur
+
 
 
 class ResultValues():
@@ -21,12 +21,14 @@ class ResultValues():
         self.tree_properties = TreeProperties(self.arbre)
         # Task 2
         self.test_env = TestEnv(self.arbre, self.test_set)
-        # print(self.test_env)
+        print(self.test_env)
+        print(self.tree_properties)
         # Task 3
         g = GenereRegles(self.arbre, self.train_set)
         self.faits_initiaux = self.train_set
         self.regles = g.regles
-        g.explique(self.faits_initiaux[11],g.regles)
+        g.explique_all(self.test_set,g.regles)
+
 
 
 
