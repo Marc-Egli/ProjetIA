@@ -74,7 +74,7 @@ class GenereRegles:
                 if fait[0] == "1":
                     return print(
                         "Déduit " + r.conclusion + " par la règle : " + r.__repr__() + " pour le fait " + str(fait) +
-                         "\nPeut être guerit en changeant : " + str(self.correcteur.corrige(fait[1])[1]))
+                        "\nPeut être guerit en changeant : " + str(self.correcteur.corrige(fait[1])[1]))
 
                 else:
                     return print(

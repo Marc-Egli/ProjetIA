@@ -19,17 +19,21 @@ class ResultValues():
         # Task 1
         id3 = ID3()
         self.arbre = id3.construit_arbre(self.train_set)
-        self.tree_properties = TreeProperties(self.arbre)
+        print(self.tree_properties)
+
         # Task 2
+        print("-----------------------------------------------------")
         self.test_env = TestEnv(self.arbre, self.test_set)
         print(self.test_env)
         print(self.tree_properties)
         # Task 3/4
+        print("-----------------------------------------------------")
         g = GenereRegles(self.arbre, self.train_set)
         self.faits_initiaux = self.train_set
         self.regles = g.regles
         #TODO Faut il expliqué le test ou train set ?
         #Car si on explique le test on classifie 40% de fau et donc les explications non pas de sens
+        #TODO print le nombre de personess sauvée avec 1 ou 2 changement
         g.explique_all(self.test_set,g.regles)
         g.explique_all(self.train_set,g.regles)
 
@@ -43,6 +47,7 @@ class ResultValues():
         continous_test = load_continous_test_set()
         self.arbre_advance = moteur.construit_arbre(continous)
         self.test_env_advanced = TestEnv(self.arbre_advance, continous_test)
+        print("-----------------------------------------------------")
         print(self.test_env_advanced)
 
 
