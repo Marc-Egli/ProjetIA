@@ -22,4 +22,4 @@ class TestEnv:
         return 1-compteur/len(test_set) , target , predictions
 
     def __repr__(self):
-        return "Pecision de l'arbre="+str(self.precision) +'\n'+ "La cible était :" + str(self.target)+'\n'+ "La prédiction était :" + str(self.predictions)
+        return "Pecision de l'arbre="+str(self.precision*100) + "%" +'\n'+ "La cible était :" + str(self.target)+'\n'+ "La prédiction était :" + str(self.predictions)

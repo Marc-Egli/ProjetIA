@@ -43,5 +43,4 @@ class Correcteur:
         for k in corrected:
             if corrected[k] != fait[k]:
                 changes.append({k: corrected[k]})
-        print(len(changes))
         return corrected, changes
